@@ -1,0 +1,14 @@
+[project]
+name = "arbot"
+version = "0.1.0"
+description = "arbot"
+readme = "README.md"
+requires-python = ">=3.8, <4.0"
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
+]
+plugins = ["nonebot_plugin_apscheduler", "nonebot_plugin_saa", "nonebot_plugin_emojimix", "nonebot_plugin_ddcheck", "nonebot_plugin_broadcast", "nonebot_plugin_bracket", "nonebot_plugin_questionmark", "nonebot_plugin_today_waifu", "nonebot_plugin_analysis_bilibili", "nonebot_plugin_eventmonitor", "nonebot_plugin_sayoroll", "nonebot_plugin_follow_withdraw", "nonebot_plugin_memes", "nonebot_plugin_alconna"]
+plugin_dirs = ["plugins"]
+builtin_plugins = ["echo"]

@@ -1,0 +1,27 @@
+{%- import "components.html.jinja" as c -%}
+
+{#-
+Args:
+- shittim_url: str
+-#}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/shittim/css/shittim.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="main">
+      {%- block content -%}{%- endblock -%}
+      {{ c.segmentation() }}
+      {%- call c.footer() -%}数据来源：什亭之匣（{{ shittim_url }}）{%- endcall -%}
+    </div>
+  </div>
+</body>
+
+</html>
